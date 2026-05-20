@@ -1,12 +1,12 @@
 <h1>Bienvenidos 2</h1>
 <div class="grid">
   <div class="col-1">
-    <input pInputText type = "text" [(ngModel)]= "loginService.user" placeholder="User">
+    <input pInputText type = "text" [(ngModel)]= "user.name" placeholder="User">
   </div>
   <div class="col-4">
-    <input pInputText type = "text" [(ngModel)]= "loginService.pass" placeholder="Pass">
+    <input pInputText type = "text" [(ngModel)]= "user.pass" placeholder="Pass">
   </div>
 </div>
 
 
-<p-button (click)="this.loginService.comprobar()" > Go!!</p-button>
+<p-button (click)="this.comprobar()" > Go!!</p-button>

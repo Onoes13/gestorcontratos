@@ -1,8 +1,10 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {FormsModule} from '@angular/forms';
-import {LoginService} from './login-service';
 import {Button} from 'primeng/button';
 import {InputText} from 'primeng/inputtext';
+import {User} from '../../models/user';
+import {Router} from '@angular/router';
+
 @Component({
   selector: 'app-login',
   imports: [
@@ -16,10 +18,18 @@ import {InputText} from 'primeng/inputtext';
 export class Login {
 
 
+  user: User = new User();
 
-  constructor(public loginService: LoginService) {
+  constructor(private router: Router) {
   }
 
+  comprobar() {
+    if (this.user.name === 'noelia' && this.user.pass === '1234') {
+      this.router.navigate(['/welcome']);
+    } else {
+      alert('Mal');
+    }
 
+  }
 
 }

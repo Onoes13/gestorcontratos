@@ -1,0 +1,21 @@
+<p>welcome works!</p>
+
+<p-button (click)="this.volver()"> Volver!!</p-button>
+
+<table>
+  <thead>
+  <tr>
+    <th>Nombre</th>
+    <th>Edad</th>
+    <th>Ciudad</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <tr *ngFor="let persona of listaPersonas">
+    <td>{{ persona.nombre }}</td>
+    <td>{{ persona.edad }}</td>
+    <td>{{ persona.ciudad }}</td>
+  </tr>
+  </tbody>
+</table>
